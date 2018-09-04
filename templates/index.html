@@ -17,6 +17,11 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/theme.css" rel="stylesheet">
+    <script>
+	  function resizeIframe(obj) {
+	    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+	  }
+	</script>
   </head>
 
   <body role="document">
@@ -46,13 +51,19 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Gun Shooting Data Analysis</h1>
-        <p>Which state in the United States had the most number of injured and the number of killed caused by gun shooting? What was the gun shooting condition in different states?</p>
+        <p>
+        How did the number of injured and the number of killed vary with different states in the United States in 2013-2014?</p>
+        
       </div>
 
 
 
-<iframe width="1000" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col2%2C+SUM(col5)%2C+SUM(col6)+from+1ldYu7GytGXBZru5brly5NJ6q3ovXaSt0y1si-F7W+group+by+col2+order+by+SUM(col5)+desc+limit+60&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22logScale%22%3Afalse%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22logScale%22%3Afalse%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=true&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=in&amp;gco_title=Number+of+injured+and+killed+in+different+states&amp;gco_domainAxis=%7B%22direction%22%3A1%7D&amp;width=1000&amp;height=600"></iframe>
-	<h5>Secretly add something here hahaha.</h5>
+<iframe width="1000" height="600" scrolling="no" onload="resizeIframe(this)" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col2%2C+SUM(col5)%2C+SUM(col6)+from+1ldYu7GytGXBZru5brly5NJ6q3ovXaSt0y1si-F7W+group+by+col2+order+by+SUM(col5)+desc+limit+60&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22logScale%22%3Afalse%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22logScale%22%3Afalse%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=true&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=in&amp;gco_title=Number+of+Injured+and+Killed+in+Different+States+in+2013-2014&amp;gco_domainAxis=%7B%22direction%22%3A1%7D&amp;width=1000&amp;height=600"></iframe>
+
+	<hr/>
+	<footer class="footer">
+        <p>Created By Wen He. Powered by <a href="https://cloud.google.com/appengine/">Google App Engine</a> and <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a>.</p>
+      </footer>
       </div> <!-- /page-header -->
     </div> <!-- /container -->
 
